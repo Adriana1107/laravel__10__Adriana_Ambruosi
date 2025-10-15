@@ -1,0 +1,21 @@
+body{
+   background-color: tomato;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.title{
+    text-align: center;
+    margin-top: 10vh;
+}
+
+.card-custom{
+    justify-content: center;
+    align-items: center;
+    margin: 15vh;
+    margin-left: auto;
+}
+
+.bg-custom{
+    height: 50vh;
+}
