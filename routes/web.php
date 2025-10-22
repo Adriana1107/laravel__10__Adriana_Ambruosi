@@ -9,9 +9,9 @@ Route::get('/', [PublicController::class, 'welcome'])->name('home');
 Route::get('welcome', [PublicController::class, 'welcome'])->name('welcome');
 
 
-Route::get('articles', [ArticleController::class, 'index'])->name('Articoli');
+Route::get('articles', [ArticleController::class, 'index'])->name('articoli');
 
-Route::get('/articles/detail/{name}', [ArticleController::class, 'ArticlesDetail'])->name('ArticlesDetail');
+Route::get('/articles/detail/{name}', [ArticleController::class, 'show'])->name('articlesDetail');
 
 // Rotta GET per mostrare il form
 Route::get('contactUs', function () {
@@ -23,6 +23,6 @@ Route::get('contactUs', function () {
 Route::post('contactUs', [PublicController::class, 'contactUs'])->name('contactUs');
 
 
-Route::get('/article/create', [ArticleController::class, 'create'])->name('ArticleCreate')->middleware('auth');
+Route::get('/article/create', [ArticleController::class, 'create'])->name('articleCreate')->middleware('auth');
 
-Route::post('/article/submit', [ArticleController::class, 'store'])->name('ArticleSubmit')->middleware('auth');
+Route::post('/article/submit', [ArticleController::class, 'store'])->name('articleSubmit')->middleware('auth');

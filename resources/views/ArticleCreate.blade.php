@@ -15,7 +15,7 @@
                         </ul>
                     </div>
                 @endif
-                <form method="post" action="{{route('ArticleSubmit')}}" enctype="multipart/form-data">
+                <form method="post" action="{{route('articleSubmit')}}" enctype="multipart/form-data">
                     @csrf
         <div class="mb-3">
             <label for="name" class="form-label">nome dell'articolo:</label>

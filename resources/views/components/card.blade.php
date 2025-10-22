@@ -6,6 +6,6 @@
     <h5 class="card-title">{{ $article->name }}</h5>
     <p class="card-text">{{ $article->description }}</p>
     <p class="card-text">{{ $article->price }} €</p>
-    <a href="{{ route('ArticlesDetail', ['name' => $article->name]) }}" class="btn btn-primary">Dettagli</a>
+    <a href="{{ route('articlesDetail', ['name' => $article->name]) }}" class="btn btn-primary">Dettagli</a>
   </div>
 </div>
