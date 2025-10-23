@@ -5,7 +5,7 @@
 
          <x-display-errors/>
 
-                <form method="post" action="{{ route('register') }}">
+                <form method="post" action="{{ route('login') }}">
                     @csrf
 
         <div class="mb-3">

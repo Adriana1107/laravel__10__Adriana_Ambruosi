@@ -17,6 +17,8 @@
         <li class="nav-item">
           <a class="nav-link" href="{{ route('contactUs.form')}}">contattaci</a>
         </li>
+
+        @guest
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             login
@@ -29,16 +31,24 @@
               Logout
             </a>
           </li>
+          @endguest
 
-          <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display:none;">
-            @csrf
-          </form>
-          <hr class="dropdown-divider"></li>
-      
-          </ul>
-        </li>
+
+          @auth
+            <li class="nav-item">
+               <span class="nav-link"> Ciao, <strong>{{ Auth::user()->name }}</strong></span>
+           </li>
+            <li class="nav-item">
+                <form method="POST" action="{{ route('logout') }}">
+                  @csrf
+                      <button type="submit" class="nav-link btn btn-link" style="display:inline">
+                          Logout
+                      </button>
+                  </form>
+            </li>
+            @endauth
       </ul>
 
     </div>
-  </div>
+  </div>    
 </nav>
